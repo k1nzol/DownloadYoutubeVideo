@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ title }}</title>
+  <link type="text/css" href="{% static 'download/css/styles.css' %}" rel="stylesheet" />
+</head>
+<body>
+  <a href="/">
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+  </a>
+
+{% block content %}
+{% endblock %}
+
+  <footer>
+    <p>© 2023 My website. All rights reserved.</p>
+  </footer>
+</body>
+</html>

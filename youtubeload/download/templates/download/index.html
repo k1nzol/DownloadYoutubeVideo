@@ -1,0 +1,18 @@
+{% extends 'download/base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+    <h2>Enter the link from youtube in the input box</h2>
+
+    <form method="post">
+    {% csrf_token %}
+    {% for f in form %}
+        <p><label for="{{ f.id_for_label }}">{{ f.label }}: </label>{{ f }}</p>
+        <div>{{ f.errors }}</div>
+  {% endfor %}
+    <button class="button" type="submit">Submit</button>
+    </form>
+
+</section>
+{% endblock %}
